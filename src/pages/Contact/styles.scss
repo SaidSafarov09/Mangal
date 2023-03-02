@@ -1,0 +1,41 @@
+@import 'src/scss';
+
+.contact {
+    padding-bottom: 3rem;
+
+  .page-header {
+    @include page-header($white, $secondary);
+  }
+  
+  .content {
+    @extend %centered-content;
+    background-color: $white;
+    
+    h2 {
+        font-size: $headline;
+        padding-bottom: 1.5rem;
+        color: $primary;
+    }
+    
+    p {
+        font-size: $big;
+        padding-bottom: 0.5rem;
+    }
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 3rem;
+  }
+  
+  @media screen and (max-width: $mobile-screen) {
+    .contact-content {
+      padding: 3rem 0;
+      max-width: 75%;
+    }
+  }
+}

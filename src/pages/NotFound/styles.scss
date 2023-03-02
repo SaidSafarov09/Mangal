@@ -1,0 +1,18 @@
+@import 'src/scss';
+
+.not-found {
+  margin-top: 4.5rem;
+  height: 89vh;
+
+    .error-cover {
+      height: 100%;
+      @include background-cover("../assets/photos/not-found.jpg");
+    }
+
+}
+
+@media (max-width: $mobile-screen) {
+  .not-found {
+    height: 60vh;
+  }
+}

@@ -1,0 +1,100 @@
+@import 'src/scss';
+
+.footer {
+    background-color: $gray-300;
+    align-items: center;
+    justify-content: center;
+    z-index: 80;
+    position: relative;
+    display: block;
+    .link {
+        color: $white;
+        text-decoration: none;
+        
+        &:hover {
+            color: $secondary;
+        }
+    }
+    
+    .conditions {
+        display: flex;
+        flex-direction: row;
+        font-size: $small;
+        padding-top: 2rem;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+
+        link {
+            color: $white;
+            text-decoration: none;
+            transition: 0.5s;
+            
+            &:hover {
+                color: $secondary;
+            }
+        }
+    }
+  
+    .copyright {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: 3rem;
+        margin-right: 3rem;
+
+        p {
+            font-size: $small;
+            color: $white;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        a {
+            color: $white;
+            text-decoration: none;
+            transition: 0.5s;
+
+            &:hover {
+                color: $secondary;
+            }
+        }
+    }
+  
+    .social-media {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        transition: 2s;
+            i {                
+                color: $white;
+
+                &:hover {
+                    color: $secondary;
+                    transform: scale(1.2);
+                }
+            }            
+        }
+}
+  
+  @media screen and (max-width: $mobile-screen) {
+    .footer{
+        .conditions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    
+            .link {
+                display: block;
+                padding-bottom: 0.5rem;
+                font-weight: bold;
+            }
+        }
+    }
+}
+  

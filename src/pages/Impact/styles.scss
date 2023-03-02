@@ -1,0 +1,89 @@
+@import 'src/scss';
+
+.impact-banner {
+    @extend %centered-column;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    object-fit: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+    z-index: -99;
+
+    img {
+        width: 100%;
+        height: 100vh;
+        min-height: 100vh;
+        position: fixed;
+        object-fit: cover;
+        z-index: -100;
+    }
+      
+    h1 {
+        margin-top: 4.5rem;
+        color: $white;
+        font-size: $largeTitle;
+    }
+}
+  
+.impact-content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 0;
+    background-color: $white;
+    
+    p {
+        font-size: $big;
+        width: 65%;
+    }
+  }
+
+.impact-chart {
+  display: flex;  
+  height: 22.5rem;
+  justify-content: center;
+  margin: auto;
+  padding-bottom: 3.5rem;  
+  background-color: $white;
+}
+
+.impact-grid {
+  display: block;
+  background-color: $white;
+}
+    
+@media screen and (max-width: $mobile-screen) {
+  .impact-banner {
+    height: 25rem;
+    padding: 6rem 2rem 5rem;
+
+      h1 {
+        font-size: $title;
+      }
+  }
+
+  .impact-content {
+    p {
+      width: 75%;
+    }
+
+  }
+
+  .impact-chart {
+    height: 48rem;
+  }
+}
+
+@media screen and (max-width: $smaller-screen) {
+  .impact-banner {
+    display: flex;
+    flex-direction: column;
+    background: url("../../assets/photos/impact.jpg") no-repeat center center;
+    background-size: cover;
+
+      h1 {
+        font-size: $subtitle;
+      }
+  }
+}
+  

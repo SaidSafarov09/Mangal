@@ -1,0 +1,182 @@
+@import 'src/scss';
+
+.navbar {
+    display: flex;
+    height: 4.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    font-size: $big;
+    z-index: 100;
+    background-color: $white;
+    @extend %box-shadow;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            
+            .logo {
+                height: 4.2rem;
+                padding-left: 3rem;
+                padding-right: 2rem;
+                fill: $primary;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .nav-list {
+                display: flex;
+                padding-right: 3.5rem;
+
+                .nav-item {
+                    list-style: none;
+                    font-size: $large;
+                    font-weight: bolder;
+                    padding: 1.6rem 0.5rem 1.6rem 2.5rem;
+
+                    .nav-link {
+                        color: #000;
+                        text-decoration: none;
+                        cursor: pointer;
+                        transition: 0.2s;
+
+                        &:hover {
+                            color: #ffbc0d;
+                        }
+                    }
+                }
+            }
+        }
+
+        .overlay.inactive {
+			display: none;
+            transition: 0.2s;
+        }
+  }
+
+@media screen and (max-width: $medium-screen) {
+    .navbar {
+        .container {
+            .menu-icon {
+                display: block;
+                align-self: center;
+                align-items: center;
+                justify-content: center;
+                color: $white;
+                cursor: pointer;
+                margin-right: 4rem;
+                padding: 0;
+
+                .line {
+                    height: 0.25rem;
+                    width: 1.75rem;
+                    background-color: $primary;
+                    transition: 0.3s;
+                    border-radius: 1rem;
+                }
+
+                .top {
+                    margin-bottom: 0.3rem;
+                }
+
+                .bottom {
+                    margin-top: 0.3rem;
+                }
+            }
+
+            .menu-icon.active {
+                .top {
+                    transform: rotate(-135deg);
+                    margin-bottom: -0.25rem;
+                }
+
+                .middle {
+                    opacity: 0;
+                }
+
+                .bottom {
+                    transform: rotate(135deg);
+                    margin-top: -0.25rem;
+                }
+            }
+
+            .nav-list {
+                display: none;
+            }
+
+            .nav-list.mobile {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                background-color: $secondary;
+                height: 100vh;
+                overflow-y: hidden;
+                top: 4.5rem;
+                left: 0;
+                padding: 3.5rem 8rem 1rem 2.5rem;
+                transform: initial;
+                transition: 0.2s;
+                opacity: 1;
+                box-shadow: -2px -2px 1px rgba(0, 0, 0, 0.05);
+                z-index: 90;
+                animation: slideIn 0.5s;
+
+                @keyframes slideIn {
+                    from {
+                      margin-left: -100%;
+                    }
+
+                    to {
+                      margin-left: 0%;
+                    }
+                  }
+
+                .nav-item {
+                    padding: 0 1rem;
+
+                    .nav-link {
+                        display: flex;
+                        color: $white;
+                        transition: 0.2s;
+                        padding-bottom: 2rem;
+
+                        &:after {
+                            margin-top: 8px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            position: absolute;
+                            background-color: $white;
+                        }
+
+                        &:hover {
+                            color: $tertiary;
+                        }
+                    }
+                }
+            }
+        }
+
+        .overlay {
+            display: flex;
+            position: fixed;
+            top: 4.5rem;
+            bottom: 0;
+			left: 0;
+			right: 0;
+            background-color: $black;
+            opacity: 0.25;
+            transition: 1s;
+			transition-timing-function: ease;
+            z-index: 80;
+        }
+
+		.overlay.inactive {
+			display: none;
+            transition: 0.2s;
+        }
+    }
+}

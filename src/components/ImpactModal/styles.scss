@@ -1,0 +1,76 @@
+@import 'src/scss';
+
+.impact-modal {
+    position: relative;
+    overflow: hidden;
+
+  .x-close {
+    top: 1.25rem;
+    right: 1.5rem;
+    position: absolute;
+
+    i {
+      font-size: $small;
+      color: $white;
+      align-self: center;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+  
+  img {
+    width: 30rem;
+    margin-bottom: 4rem;
+    @include fadeIn(.7s, alternate);
+  }
+  
+  .content {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: $primary;
+    color: $white;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    
+        p {
+            font-size: $large;
+            @include fadeIn(.7s, forwards);
+        }
+    }
+
+    .arrows {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      top: 45%;
+      padding: 0.75rem;
+      z-index: 50;
+
+      i {
+        font-size: $small;
+        color: $white;
+        align-self: center;
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+}
+  
+@media screen and (max-width: $smaller-screen) {
+  .impact-modal {
+    width: 20rem;
+    img {
+      width: 20rem;
+    }
+  }
+}
+  

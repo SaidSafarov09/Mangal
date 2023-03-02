@@ -1,0 +1,9 @@
+@import 'src/scss';
+
+.modal {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: $white;
+    @include fadeIn(.5s, alternate);
+}
