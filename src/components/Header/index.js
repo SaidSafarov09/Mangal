@@ -83,7 +83,7 @@ const Header = () => {
                                 className='nav-link'
                                 onClick={() => setMobileMenu(onClose)}
                             >
-                                Заботимся о Вас
+                                Заботимся о вас
                             </Link>
                         </li>
                         <li
