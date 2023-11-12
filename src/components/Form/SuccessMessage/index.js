@@ -11,8 +11,8 @@ const SuccessMessage = () => {
                 size='3.5rem'
                 hover='$white'
             />
-            <h2>Message sent!</h2>
-            <p>Coffee House’s customer service will get back to you shortly.</p>
+            <h2>Сообщение отправлено!</h2>
+            <p>Служба поддержки Mangal свяжется с вами в ближайшее время.</p>
         </div>
     )
 }
